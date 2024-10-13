@@ -13,6 +13,10 @@ export class ArticlesService {
     return this.prisma.article.findMany({ where: { published: true } });
   }
 
+  findDrafts() {
+    return this.prisma.article.findMany({ where: { published: false } });
+  }
+
   findOne(id: number) {
     return `This action returns a #${id} article`;
   }
