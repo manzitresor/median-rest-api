@@ -7,13 +7,13 @@ import {
   Param,
   Delete,
   ParseIntPipe,
-  NotFoundException,
+  // NotFoundException,
 } from '@nestjs/common';
 import { ArticlesService } from './articles.service';
 import { UpdateArticleDto } from './dto/update-article.dto';
 import { CreateArticleDto } from './dto/create-article.dto';
 import { ApiCreatedResponse, ApiOkResponse, ApiTags } from '@nestjs/swagger';
-import { ArticleEntity } from './articles.entity';
+import { ArticleEntity } from './entities/articles.entity';
 
 @Controller('articles')
 @ApiTags('articles')
@@ -42,9 +42,6 @@ export class ArticlesController {
   @ApiOkResponse({ type: ArticleEntity })
   async findOne(@Param('id', ParseIntPipe) id: number) {
     const article = await this.articlesService.findOne(id);
-    if (!article) {
-      throw new NotFoundException(`Article with ${id} does not exist.`);
-    }
     return article;
   }
 

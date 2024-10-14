@@ -14,7 +14,7 @@ export class CreateArticleDto {
   @ApiProperty()
   title: string;
 
-  @IsBoolean()
+  @IsString()
   @IsOptional()
   @IsNotEmpty()
   @MaxLength(300)
@@ -26,7 +26,7 @@ export class CreateArticleDto {
   @ApiProperty()
   body: string;
 
-  @IsString()
+  @IsBoolean()
   @IsOptional()
   @ApiProperty({ required: false, default: false })
   published?: boolean = false;
