@@ -8,3 +8,6 @@ This is backend REST API for a blog application called "Median" (a simple Medium
 - PostgreSQL as the database
 - Swagger as the API documentation tool
 - TypeScript as the programming language
+
+## Documentation
+[Swagger doc](https://median-rest-api.onrender.com/api#/)
