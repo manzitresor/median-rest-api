@@ -10,4 +10,4 @@ This is backend REST API for a blog application called "Median" (a simple Medium
 - TypeScript as the programming language
 
 ## Documentation
-[Swagger doc](https://median-rest-api.onrender.com/api#/)
+[API Swagger doc](https://median-rest-api.onrender.com/api#/)
